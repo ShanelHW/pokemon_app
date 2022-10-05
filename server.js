@@ -5,12 +5,15 @@ const pokemon = require('./models/pokemon.js'); //NOTE: it must start with ./ if
 
 const app = express();
 
+app.set('view engine', 'jsx');
+app.engine('jsx', require('express-react-views').createEngine());
+
 app.get('/', function (req, res) {
     res.send(`<h1> Welcome to the Pokemon App</h1>`);
   });
 
   app.get('/pokemon', function (req, res) {
-    res.send(pokemon);
+    res.render('Index');
   });
 
 
