@@ -3,21 +3,21 @@ const React = require('react')
 
 class Index extends React.Component {
   render() {
-      const { pokemon } = this.props;
+
       return (
               <div>
                   <h1>Pokemon Index Page</h1>
                   <ul>
-                      {pokemon.map((pokemon, i) => {
-                          return (
+                      {pokemon.map((pokemon, i) =>(
+
                               <li>
                                   The{' '}
-                                  <a href={`/pokemon/${i}`}>
+                                  <a href={/pokemon/${i}}>
                                       {pokemon}
                                   </a>
                               </li>
-                          );
-                      })}
+                          )
+                      )}
                   </ul>
               </div>
       );
